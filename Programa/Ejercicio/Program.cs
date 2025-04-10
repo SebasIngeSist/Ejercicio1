@@ -27,9 +27,31 @@ namespace Ejercicio
         }
         static void ejercicio2()
         {
-            Console.WriteLine("Sebasrian\n 20 \nIng. Sistemas");
+            Console.WriteLine("Sebasrian\n20\nIng. Sistemas");
 
         }
+        static void ejercicio4()
+        {
+            int num1, num2;
+
+            Console.Write("Ingrese el primer numero: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Ingrese el primer numero: ");
+            num2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine();
+            Console.WriteLine("La suma es: " +(num1+num2));
+            Console.WriteLine("La resta es: "+(num1-num2));
+            Console.WriteLine("La multiplicacion es: " + (num1 * num2));
+            Console.WriteLine("La division es: " + (num1 /num2));
+            Console.WriteLine("El modulo es: " + (num1 %num2));
+
+        }
+
+
+        }
+
+
 
     }
 }
