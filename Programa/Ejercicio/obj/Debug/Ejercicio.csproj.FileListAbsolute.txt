@@ -1,0 +1,8 @@
+C:\Users\sebas\Desktop\Fundamentos 3\Programa\Ejercicio\bin\Debug\Ejercicio.exe.config
+C:\Users\sebas\Desktop\Fundamentos 3\Programa\Ejercicio\bin\Debug\Ejercicio.exe
+C:\Users\sebas\Desktop\Fundamentos 3\Programa\Ejercicio\bin\Debug\Ejercicio.pdb
+C:\Users\sebas\Desktop\Fundamentos 3\Programa\Ejercicio\obj\Debug\Ejercicio.csproj.AssemblyReference.cache
+C:\Users\sebas\Desktop\Fundamentos 3\Programa\Ejercicio\obj\Debug\Ejercicio.csproj.SuggestedBindingRedirects.cache
+C:\Users\sebas\Desktop\Fundamentos 3\Programa\Ejercicio\obj\Debug\Ejercicio.csproj.CoreCompileInputs.cache
+C:\Users\sebas\Desktop\Fundamentos 3\Programa\Ejercicio\obj\Debug\Ejercicio.exe
+C:\Users\sebas\Desktop\Fundamentos 3\Programa\Ejercicio\obj\Debug\Ejercicio.pdb
