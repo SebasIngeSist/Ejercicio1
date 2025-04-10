@@ -11,6 +11,8 @@ namespace Ejercicio
         static void Main(string[] args)
         {
             ejercicio1();
+            ejercicio2();
+            Console.ReadKey();
         }
 
         static void ejercicio1()
@@ -21,7 +23,12 @@ namespace Ejercicio
             Console.Write("Ingresa su nombre: ");
             nombre = Console.ReadLine();
 
-            Console.WriteLine(nombre + " Bienvenido al curso de fundamentos");
+            Console.WriteLine("\n"+nombre + " Bienvenido al curso de fundamentos");
+        }
+        static void ejercicio2()
+        {
+            Console.WriteLine("Sebasrian\n 20 \nIng. Sistemas");
+
         }
 
     }
