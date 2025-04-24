@@ -12,6 +12,9 @@ namespace Ejercicio
         {
             ejercicio1();
             ejercicio2();
+            ejercicio4();
+            ejercicio3();
+            ejercicio5();
             Console.ReadKey();
         }
 
@@ -48,9 +51,66 @@ namespace Ejercicio
 
         }
 
+        static void ejercicio3()
+        {
+            Console.Write("Ingrese el sueldo base: ");
+            double sueldoBase = Convert.ToDouble(Console.ReadLine());
+
+        
+            double sueldoMaria = sueldoBase - (sueldoBase * 0.05) - 25;
+            double sueldoJuan = sueldoBase + (sueldoBase * 0.23) + 72;
+            double sueldoPatricio = sueldoBase + (sueldoBase * 0.05) - 56;
+
+        
+            double sumaSueldos = sueldoMaria + sueldoJuan + sueldoPatricio;
+
+        
+            Console.WriteLine($"\nSueldo de María: {sueldoMaria:C}");
+            Console.WriteLine($"Sueldo de Juan: {sueldoJuan:C}");
+            Console.WriteLine($"Sueldo de Patricio: {sueldoPatricio:C}");
+            Console.WriteLine($"Suma total de sueldos: {sumaSueldos:C}");
+
+
+
 
         }
+        static void ejercicio5()
+        {
+            Console.WriteLine("Ingrese el monto en soles peruanos (PEN): ");
+            double montoPEN = Convert.ToDouble(Console.ReadLine());
 
+            Console.WriteLine("\nSeleccione la moneda a la que desea convertir:");
+            Console.WriteLine("1. Dólares (USD)");
+            Console.WriteLine("2. Euros (EUR)");
+            int opcion = Convert.ToInt32(Console.ReadLine());
+
+            // Variable para almacenar el resultado
+            double montoConvertido = 0;
+
+            // Usar switch para determinar la opción seleccionada
+            switch (opcion)
+            {
+                case 1:
+                    // Convertir a dólares
+                    montoConvertido = montoPEN / 3.75;
+                    Console.WriteLine($"\n{montoPEN} soles peruanos (PEN) son {montoConvertido:F2} dólares (USD).");
+                    break;
+                case 2:
+                    // Convertir a euros
+                    montoConvertido = montoPEN / 4.05;
+                    Console.WriteLine($"\n{montoPEN} soles peruanos (PEN) son {montoConvertido:F2} euros (EUR).");
+                    break;
+                default:
+                    // Opción no válida
+                    Console.WriteLine("Opción no válida. Por favor seleccione 1 o 2.");
+                    break;
+
+
+
+
+
+            }
+        }
 
 
     }
