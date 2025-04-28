@@ -16,6 +16,10 @@ namespace Ejercicio
             ejercicio3();
             ejercicio5();
             ejercicio6();
+            ejerciciofor1();
+            ejerciciofor2();
+            ejerciciofor3();
+            ejerciciofor4();
             Console.ReadKey();
         }
 
@@ -115,69 +119,143 @@ namespace Ejercicio
 
         static void ejercicio6()
         {
+            bool continuar = true;
 
-            Console.WriteLine("Seleccione una opción para calcular el área de una figura geométrica:");
-            Console.WriteLine("1. Cuadrado");
-            Console.WriteLine("2. Rectángulo");
-            Console.WriteLine("3. Triángulo");
-            Console.WriteLine("4. Círculo");
-
-            // Leer la opción seleccionada
-            int opcion = Convert.ToInt32(Console.ReadLine());
-
-            // Variable para el resultado del área
-            double area = 0;
-
-            switch (opcion)
+            while (continuar)
             {
-                case 1:
-                    // Área de un cuadrado: A = lado^2
-                    Console.WriteLine("Ingrese el valor del lado del cuadrado:");
-                    double lado = Convert.ToDouble(Console.ReadLine());
-                    area = lado * lado;
-                    Console.WriteLine($"El área del cuadrado es: {area} unidades cuadradas.");
-                    break;
+                Console.WriteLine("Seleccione una opción para calcular el área de una figura geométrica:");
+                Console.WriteLine("1. Cuadrado");
+                Console.WriteLine("2. Rectángulo");
+                Console.WriteLine("3. Triángulo");
+                Console.WriteLine("4. Círculo");
 
-                case 2:
-                    // Área de un rectángulo: A = largo * ancho
-                    Console.WriteLine("Ingrese el valor del largo del rectángulo:");
-                    double largo = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("Ingrese el valor del ancho del rectángulo:");
-                    double ancho = Convert.ToDouble(Console.ReadLine());
-                    area = largo * ancho;
-                    Console.WriteLine($"El área del rectángulo es: {area} unidades cuadradas.");
-                    break;
+                int opcion = Convert.ToInt32(Console.ReadLine());
+                bool repetirMismaFigura = true;
 
-                case 3:
-                    // Área de un triángulo: A = (base * altura) / 2
-                    Console.WriteLine("Ingrese el valor de la base del triángulo:");
-                    double baseTriangulo = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("Ingrese el valor de la altura del triángulo:");
-                    double altura = Convert.ToDouble(Console.ReadLine());
-                    area = (baseTriangulo * altura) / 2;
-                    Console.WriteLine($"El área del triángulo es: {area} unidades cuadradas.");
-                    break;
+                while (repetirMismaFigura)
+                {
+                    double area = 0;
 
-                case 4:
-                    // Área de un círculo: A = π * radio^2
-                    Console.WriteLine("Ingrese el valor del radio del círculo:");
-                    double radio = Convert.ToDouble(Console.ReadLine());
-                    area = Math.PI * radio * radio;
-                    Console.WriteLine($"El área del círculo es: {Math.Round(area, 2)} unidades cuadradas.");
-                    break;
+                    switch (opcion)
+                    {
+                        case 1:
+                            Console.WriteLine("Ingrese el valor del lado del cuadrado:");
+                            double lado = Convert.ToDouble(Console.ReadLine());
+                            area = lado * lado;
+                            Console.WriteLine($"El área del cuadrado es: {area} unidades cuadradas.");
+                            break;
 
-                default:
-                    // Caso incorrecto
-                    Console.WriteLine("Valor ingresado incorrecto. Por favor seleccione una opción válida.");
-                    break;
+                        case 2:
+                            Console.WriteLine("Ingrese el valor del largo del rectángulo:");
+                            double largo = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("Ingrese el valor del ancho del rectángulo:");
+                            double ancho = Convert.ToDouble(Console.ReadLine());
+                            area = largo * ancho;
+                            Console.WriteLine($"El área del rectángulo es: {area} unidades cuadradas.");
+                            break;
+
+                        case 3:
+                            Console.WriteLine("Ingrese el valor de la base del triángulo:");
+                            double baseTriangulo = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("Ingrese el valor de la altura del triángulo:");
+                            double altura = Convert.ToDouble(Console.ReadLine());
+                            area = (baseTriangulo * altura) / 2;
+                            Console.WriteLine($"El área del triángulo es: {area} unidades cuadradas.");
+                            break;
+
+                        case 4:
+                            Console.WriteLine("Ingrese el valor del radio del círculo:");
+                            double radio = Convert.ToDouble(Console.ReadLine());
+                            area = Math.PI * radio * radio;
+                            Console.WriteLine($"El área del círculo es: {Math.Round(area, 2)} unidades cuadradas.");
+                            break;
+
+                        default:
+                            Console.WriteLine("Valor ingresado incorrecto. Por favor seleccione una opción válida.");
+                            repetirMismaFigura = false;
+                            break;
+                    }
+
+                    Console.WriteLine("\n¿Qué desea hacer ahora?");
+                    Console.WriteLine("1. Calcular otra vez la MISMA figura.");
+                    Console.WriteLine("2. Calcular una figura DIFERENTE.");
+
+                    string respuesta = Console.ReadLine();
+
+                    if (respuesta == "1")
+                    {
+                        repetirMismaFigura = true; 
+                    }
+                    else if (respuesta == "2")
+                    {
+                        repetirMismaFigura = false; 
+                        Console.Clear();
+                        break; 
+                    }
+                }
+            }
+        }
+        static void ejerciciofor1()
+        {
+           
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Java");
+            }
 
 
+        }
+        static void ejerciciofor2()
+        {
+            
+            int numero = 5;
+
+            Console.WriteLine($"Tabla de multiplicar del {numero}:");
+
+           
+            for (int i = 1; i <= 12; i++)
+            {
+                int resultado = numero * i;
+                Console.WriteLine($"{numero} x {i} = {resultado}");
+            }
+        }
+        static void ejerciciofor3()
+        {
+
+            int numero;
+
+            Console.WriteLine("Ingresa el # para generar su tabal de multiplicar:");
+            numero =int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Tabla de multiplicar del {numero}:");
 
 
+            for (int i = 1; i <= 12; i++)
+            {
+                int resultado = numero * i;
+                Console.WriteLine($"{numero} x {i} = {resultado}");
+            }
+
+        }
+        static void ejerciciofor4()
+        {
+            Console.WriteLine("Números impares entre 1 y 100:");
+
+            for (int i = 1; i <= 100; i += 2)
+            {
+                Console.WriteLine(i);
             }
 
         }
 
 
+
+
+
+
+
     }
+
+
+
 }
